@@ -1,0 +1,14 @@
+# It's a node app
+language: node_js
+
+# Run it using the latest stable version
+node_js: node
+
+services:
+- mongodb
+addons:
+  apt:
+    sources:
+    - mongodb-3.2-precise
+    packages:
+    - mongodb-org-server

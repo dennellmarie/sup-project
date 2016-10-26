@@ -14,7 +14,7 @@ var should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('User endpoints', function() {
+describe.only('User endpoints', function() {
     beforeEach(function(done) {
         // Clear the database
         mongoose.connection.db.dropDatabase(done);
@@ -52,7 +52,7 @@ describe('User endpoints', function() {
                     });
             });
 
-            it('should return a list of users', function() {
+            it.only('should return a list of users', function() {
                 var user = {
                     username: 'joe',
                     password: 'abcd'
