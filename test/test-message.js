@@ -1,4 +1,4 @@
-global.databaseUri = 'mongodb://localhost/sup-dev';
+/*global.databaseUri = 'mongodb://localhost/sup-dev';
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
@@ -656,3 +656,4 @@ describe.skip('Message endpoints', function() {
         });
     });
 });
+*/
