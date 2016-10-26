@@ -1,9 +1,5 @@
-# It's a node app
 language: node_js
-
-# Run it using the latest stable version
 node_js: node
-
 services:
 - mongodb
 addons:
@@ -12,3 +8,10 @@ addons:
     - mongodb-3.2-precise
     packages:
     - mongodb-org-server
+deploy:
+  provider: heroku
+  api_key:
+    secure: nVh/C0LoTErz7ImVssMdO8mX1W5MwLAzXlinwaWWcUNz58dq2Z59A3nfMLPjK5HkaVaG5pXjrtp13JkzaX3h8zsvyhGiaYeMYlyVX0W9TN7A/kInKw1R9tddk7oB4ZLn+3ilUD+v7eAoNsXxDeUySoJegYOuBquSMhVpP6u7tQN9mDimfQ3zrhnLR33IivmqVzJMMJ24ote8Y8lM4on6g1h0xYzQ1uOy5ick1EY9zE1aCDfs/Sds9r7FY+C2HuD6047FqA7IdT9/jk95V0y9CqyqyvOoHqbnhKO0ccCkvXT62aLbWYzN6S/1acy6c04foY9dWHyWAf1GRAZxQLW1Uz4Y/h55+OiYGRQR7m3+NjC4iNUkiaNXMz/lhrV2n5f7L+CE3LW5eUNi+orFEHEqpdL486mFvsmCZOQQaH6gB3+jiGnDgOH86t6QK5YXUFbLVOKuXsGulz/yBfA3Lgh+8HEia6RGhwurwSENd0V6EbL6PqJ+9uZ0F5In1LrBBnpe6cU7UMZQLd0+6aewHxLCMce5UFQvpI8yoiXCyRG3iKWBYUbV51yhjEugfnBpGJrC10xCX8e94rTHRZFCeweSEHd3CKXU3URzSIvCznuHBuo5tDuvi+toK8Ib0927cFu47Zs1x6E+nL629WXULmvKAPxBnQOq2dWBEUWkMREyW5k=
+  app: afternoon-crag-96572
+  on:
+    repo: dennellmarie/sup-project
