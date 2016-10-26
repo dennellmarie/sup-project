@@ -55,7 +55,9 @@ app.get('/users', passport.authenticate('basic', {session:false}), function(req,
             return res.status(500).json({message: 'Internal Server Errror'});
         }
         res.json(users);
+        console.log('THIS IS WORKING INSIDE CALLBACK');
     });
+    console.log('THIS IS WORKING OUTSIDE');
 });
 
 app.post('/users', jsonParser, function(req, res) {
