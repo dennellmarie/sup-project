@@ -267,6 +267,7 @@ app.get('/messages/:messageId', passport.authenticate('basic', {session: false})
 
 var runServer = function(callback) {
     var databaseUri = process.env.DATABASE_URI || global.databaseUri || 'mongodb://localhost/sup';
+    console.log('TRYING TO CONNECT');
     mongoose.connect(databaseUri).then(function() {
         var port = process.env.PORT || 8080;
         var server = app.listen(port, function() {
